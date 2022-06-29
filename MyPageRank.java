@@ -15,13 +15,9 @@ import support.graph.Graph;
 import support.graph.PageRank;
 
 /**
- * In this class you will implement one of many different versions
+ * In this class I implemented one of many different versions
  * of the PageRank algorithm. This algorithm will only work on
- * directed graphs. Keep in mind that there are many different ways
- * to handle sinks.
- *
- * Make sure you review the help slides and handout for details on
- * the PageRank algorithm.
+ * directed graphs.
  *
  */
 public class MyPageRank<V> implements PageRank<V> {
@@ -38,9 +34,7 @@ public class MyPageRank<V> implements PageRank<V> {
 	private boolean _stopConvergence;
 
 	/**
-	 * The main method that does the calculations! You'll want to call the methods
-	 * that initialize your variables here. You'll also want to decide on a
-	 * type of loop - for loop, do while, or while loop - for your calculations.
+	 * The main method that does the calculations
 	 *
 	 * @return A Map of every Vertex to its corresponding rank
 	 */
@@ -97,8 +91,7 @@ public class MyPageRank<V> implements PageRank<V> {
 
 	/**
 	 * Method used to account for sink pages (those with no outgoing
-	 * edges). There are multiple ways you can implement this, check
-	 * the lecture and help slides!
+	 * edges).
 	 */
 	private void handleSinks() {
 

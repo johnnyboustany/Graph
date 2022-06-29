@@ -12,14 +12,7 @@ import java.util.HashMap;
 
 /**
  * This class tests the functionality of your PageRank algorithm on a
- * directed AdjacencyMatrixGraph. The general framework of a test case is:
- * - Name the test method descriptively,
- * - Mention what is being tested (it is ok to have slightly verbose method names here)
- *
- * Some tips to keep in mind when writing test cases:
- * - All pages' ranks should total to 1.
- * - It will be easier to start out by writing test cases on smaller graphs.
- *
+ * directed AdjacencyMatrixGraph.
  */
 public class MyPageRankTest {
 

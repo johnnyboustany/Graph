@@ -27,17 +27,6 @@ import support.graph.NodeSequence;
  * attempting to write this program. An adjacency matrix consists of a 2D array
  * of Vertices, with each vertex of the graph appearing in both dimensions.
  *
- * Since we are using an adjacency matrix, each vertex must have a 'number', so
- * that it can represent an index in one of the dimensional arrays. This
- * assignment is not as trivial as it may appear. Remember that your arrays have
- * a maximum index. Thus, you cannot just up the number for each vertex. Why
- * not? Think about what happens when you constantly add and delete new
- * vertices. You will soon exceed the size of your adjacency matrix array. Note
- * further that this number must be unique.
- * 
- * Make sure your AdjacencyMatrixGraph can be both directed and undirected!
- *
- * Good luck, and as always, start early, start today, start yesterday!
  */
 public class AdjacencyMatrixGraph<V> implements Graph<V> {
 
@@ -57,7 +46,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
      *
      * Takes in a boolean that represents whether the graph will be directed.
      *
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      */
     public AdjacencyMatrixGraph(boolean directed) {
         _adjMatrix = this.makeEmptyEdgeArray();
@@ -73,7 +62,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
      * Returns an iterator holding all the Vertices of the graph.
      *
      * <p>
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      * </p>
      * * Note that the visualizer uses this method to display the graph's
      * vertices, so you should implement it first.
@@ -89,11 +78,10 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
      * Returns an iterator holding all the edges of the graph.
      *
      * <p>
-     * This must run in O(|1|) time.
+     * This runs in O(|1|) time.
      * </p>
      *
-     * Note that the visualizer uses this method to display the graph's edges,
-     * so you should implement it first.
+     * Note that the visualizer uses this method to display the graph's edges.
      *
      * @return an Iterator containing the edges of the Graph.
      */
@@ -103,19 +91,10 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
     }
 
     /**
-     * Inserts a new Vertex into your Graph. You will want to first generate a
-     * unique number for your vertex that falls within the range of your
-     * adjacency array. You will then have to add the Vertex to your set of
-     * vertices.
+     * Inserts a new Vertex into the Graph.
      *
      * <p>
-     * You will not have to worry about the case where *more* than MAX_VERTICES
-     * vertices are in your graph. Your code should, however, be able to hold
-     * MAX_VERTICES vertices at any time.
-     * </p>
-     *
-     * <p>
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      * </p>
      * 
      * @param vertElement
@@ -134,13 +113,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
     }
 
     /**
-     * Inserts a new Edge into your Graph. You need to update your adjacency
-     * matrix to reflect this new added Edge. In addition, the Edge needs to be
-     * added to the edge set. 
-     *
-     * If the graph is directed, you will only want an edge
-     * starting from the first vertex ending at the second vertex. If the graph is
-     * undirected, you will want an edge both ways.
+     * Inserts a new Edge into the Graph.
      * 
      * <p>
      * This must run in O(1) time.
@@ -176,12 +149,9 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
     }
 
     /**
-     * Removes a Vertex from your graph. You will first have to remove all edges
-     * that are connected to this Vertex. (Perhaps you can use other methods you
-     * will eventually write to make this easier?) Finally, remove the Vertex
-     * from the vertex set.
+     * Removes a Vertex from the graph.
      * <p>
-     * This must run in O(|V|) time.
+     * This runs in O(|V|) time.
      * </p>
      *
      * @param vert
@@ -210,12 +180,10 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
     }
 
     /**
-     * Removes an Edge from your Graph. You will want to remove all references
-     * to it from your adjacency matrix. Don't forget to remove it from the edge
-     * set. Make sure to remove only the correct edge if the graph is directed.
+     * Removes an Edge from the Graph.
      *
      * <p>
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      * </p>
      *
      * @param edge
@@ -256,7 +224,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
      * edge from the first vertex to the second and vice versa. 
      *
      * <p>
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      * </p>
      *
      * @param v1
@@ -289,7 +257,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
     /**
      * Returns an Iterator over all the Edges that are incoming to this Vertex.
      * <p>
-     * This must run in O(|V|) time;
+     * This runs in O(|V|) time;
      * </p>
      * 
      *
@@ -328,7 +296,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
     /**
      * Returns an Iterator of all the Edges that are outgoing from this vertex.
      * <p>
-     * This must run in O(|V|) time;
+     * This runs in O(|V|) time;
      * </p>
 
      * @param vert
@@ -368,7 +336,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
      * work if called on a directed graph. This method will be used in MyPageRank.
      * 
      * @param vert
-     *            The vertex to to find the outgoing edges on.
+     *            The vertex to find the outgoing edges on.
      * @return an int
      * @throws InvalidVertexException
      *             Thrown when the Vertex is not valid.
@@ -402,8 +370,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
 
     /**
      * Returns the Vertex that is on the other side of Edge e opposite of Vertex
-     * v. Consulting the adjacency matrix may result in a running time that is
-     * too high.
+     * v.
      * 
      * If the edge is not incident on v, then throw a NoSuchVertexException.
      *
@@ -484,7 +451,7 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
      * second vertex.
      * 
      * <p>
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      * </p>
      * 
      * @param v1
@@ -527,12 +494,10 @@ public class AdjacencyMatrixGraph<V> implements Graph<V> {
 
     /**
      * Clears all the vertices and edges from the graph. You will want to also
-     * clear the adjacency matrix. Remember the power of Java's garbage
-     * collection mechanism. If you re-instantiate something, the instance of
-     * what that Object used to be disappears.
+     * clear the adjacency matrix.
      *
      * <p>
-     * This must run in O(1) time.
+     * This runs in O(1) time.
      * </p>
      */
     @Override

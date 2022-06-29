@@ -24,18 +24,7 @@ import support.graph.MinSpanForest;
 /**
  * This class tests the functionality of your MSF algorithms on an AdjacencyMatrixGraph
  * with a 'String' type parameter for the vertices. Edge elements are Integers.
- * The general framework of a test case is: - Name the test method descriptively,
- * mentioning what is  being tested (it is ok to have slightly verbose method names here)
- * Set-up the program state (ex: instantiate a heap and insert K,V pairs into it) - Use
- * assertions to validate that the progam is in the state you expect it to be
- * See header comments over tests for what each test does
- * 
- * Before each test is run, you can assume that the '_graph' variable is reset to
- * a new instance of the a Graph<String> that you can simply use 'as is', as
- * well as the '_msf' variable.
  *
- * Of course, please do not modify anything below the 'DO NOT MODIFY ANYTHING BELOW THIS LINE'
- * line, or the above assumptions may be broken.
  */
 @RunWith(Parameterized.class)
 public class MsfTest {

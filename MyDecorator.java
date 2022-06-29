@@ -8,26 +8,7 @@ import support.graph.CS16Edge;
 
 /**
  * 
- * Your implementation of decorations. All methods must run in O(1) time.
- * 
- * <p>
- * This program makes heavy use of the decorator pattern. It is
- * absolutely essential that you understand this design pattern before you start
- * coding. In previous programs, like Heap, you were allowed to modify your
- * Position classes when you wanted that class to store an additional piece of
- * information. However, when you want to potentially store a lot of things in
- * your classes, and especially when you do not know in advance what you will be
- * storing, the decorator's usefulness is profound.
- * </p>
- *
- * <p>
- * Think of the decorator pattern like a post-it
- * note. You write what you want on it, then stick it on the class. Later on,
- * when you want to retrieve that information, you just retrieve the note, and
- * read what it has to say. Please refer to the handout for more details on the
- * decorator pattern and some examples on its usage.
- * </p>
- *
+ * My implementation of decorations. All methods run in O(1) time.
  * 
  */
 public class MyDecorator<K, V> implements CS16Decorator<K, V> {
