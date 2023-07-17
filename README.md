@@ -1,4 +1,4 @@
-# Graph README
+# Graph Project
 
 ## Design Choices:
 
