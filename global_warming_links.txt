@@ -25,3 +25,4 @@ nature.org nytimes.com 1
 climate.nasa.gov nature.org 1
 globalwarmingskeptics.org earthiscold.com 1
 nytimes.com globalwarmingisfakenews.org 1
+

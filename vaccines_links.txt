@@ -28,3 +28,4 @@ vaccinationstation.com vaccinescauseautism.com 1
 vaccinesmakeyousick.com vaccinescauseautism.com 1
 vaccineinfo.com vaccinesmakeyousick.com 1
 vaccinesareimportant.org vaccinationstation.com 1
+
