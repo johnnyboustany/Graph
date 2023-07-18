@@ -14,3 +14,4 @@ RUN_TESTS = java -cp /course/cs0160/lib/nds4/nds4.jar:/course/cs0160/lib/json-si
 		       
 run_tests:
 		$(RUN_TESTS)
+
