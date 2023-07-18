@@ -1,4 +1,6 @@
-# Graph Project
+# Graph
+
+Welcome to the Graph project! This project focuses on implementing efficient algorithms for graph manipulation and analysis. It boasts two main algorithms: the Prim-Jarnik algorithm and the Page Rank algorithm, both designed to handle various types of graphs and produce accurate results.
 
 ## Design Choices:
 
